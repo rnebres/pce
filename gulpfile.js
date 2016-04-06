@@ -9,7 +9,7 @@ var source = {
 	"css":"source/assets/scss/**/*.scss",
 	"js":"source/assets/js/**/*.js",
 	"angular":"source/app/**/*",
-	"fonts":"source/fonts/**/*",
+	"fonts":"source/assets/fonts/**/*",
 	"html":"source/*.html"
 }
 
@@ -36,7 +36,7 @@ gulp.task('copyAngular',function(){
 		.pipe(gulp.dest(destination.angular));
 });
 gulp.task('copyFonts',function(){
-	return gulp.src(source.angular)
+	return gulp.src(source.fonts)
 		.on('error', gutil.log)
 		.pipe(gulp.dest(destination.fonts));
 });
