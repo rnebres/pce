@@ -1,0 +1,10 @@
+.form-inline{
+	&.filter{
+		.form-control{
+			padding: 15px;
+			min-width: 220px;
+			height: auto;
+
+		}
+	}
+}

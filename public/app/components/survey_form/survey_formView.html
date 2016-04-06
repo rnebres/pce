@@ -1,0 +1,34 @@
+<div class="fluid">
+    <div class="survey-form-container">
+        <form name="surveyForm" ng-submit="submit_form(surveyForm)" novalidate>
+            <h2 class="survey__title">Survey Form</h2>
+            <p>Please Answer the Survey Form. <small>Note: *All Fields are required</small></p>
+            
+            <div class="form-group" ng-class="{'has-error': surveyForm.name.$invalid && submitted }">
+                <label for="name">Name</label>
+                <input type="text" name="name" class="form-group__control text-capitalize" id="name" ng-model="form.name" required>
+                <small class="text--danger" ng-if="surveyForm.name.$invalid && submitted">Please check your name</small>
+            </div>
+            <div class="form-group" ng-class="{'has-error': surveyForm.email.$invalid && submitted }">
+                <label for="email">Email</label>
+                <input type="email" name="email" class="form-group__control" id="email" ng-model="form.email" required>
+                <small class="text--danger" ng-if="surveyForm.email.$invalid && submitted">Please check your email</small>
+            </div>
+            <div class="form-group" ng-class="{'has-error': surveyForm.gender.$invalid && submitted }">
+                <label for="gender">Gender</label>
+                <select name="gender" id="gender" class="form-group__control" ng-model="form.gender" required>
+                    <option value>Select Gender</option>
+                    <option value="m">M</option>
+                    <option value="f">F</option>
+                </select>
+                <small class="text--danger" ng-if="surveyForm.gender.$invalid && submitted">Please check your gender</small>
+            </div>
+            <div class="form-group" ng-class="{'has-error': surveyForm.color.$invalid && submitted }">
+                <label for="favcolor">Favorite Color</label>
+                <input type="text" name="color" class="form-group__control text-capitalize" id="favcolor" ng-model="form.color" required>
+                <small class="text--danger" ng-if="surveyForm.color.$invalid && submitted">Please check your color</small>
+            </div>
+            <button class="btn btn--primary pull-right">Submit</button>
+        </form>
+    </div>
+</div>

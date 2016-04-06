@@ -1,0 +1,52 @@
+/*
+ * PLUGIN
+ */
+ @import 'plugin/bootstrap';
+ @import 'plugin/font-awesome/font-awesome';
+
+ /*
+ * SETTINGS
+ */
+ 
+ @import 'settings/colors';
+ @import 'settings/buttons';
+ @import 'settings/fonts';
+
+ 
+/*
+ * TOOLS
+ */
+
+
+/*
+ * GENERIC
+ */
+ @import 'generic/generic';
+
+/*
+ * BASE
+ */
+ @import 'base/base';
+/*
+ * OBJECTS
+ */
+
+
+/*
+ * COMPONENTS
+ */
+
+ @import 'components/header';
+ @import 'components/footer';
+ @import 'components/container';
+ @import 'components/carousel';
+ @import 'components/filters';
+
+ @import 'components/news_promos_list';
+ @import 'components/chess_events';
+
+
+/*
+ * TRUMPS
+ */
+  @import 'trumps/override';

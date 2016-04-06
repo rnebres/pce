@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="paychessApp">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PayChess</title>
+	<!-- <link rel="stylesheet" href="assets/css/font-awesome.css"> -->
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+	
+	<paychess-header></paychess-header>
+	<main class="pce-main" ui-view></main>
+	<!-- <alert-message ng-show="isAlert"></alert-message> -->
+	<paychess-footer></paychess-footer>
+
+	<script src="app/js/angular.js"></script>
+	<script src="app/js/angular-ui-router.js"></script>
+	<script src="app/js/ui-bootstrap.js"></script>
+	<!-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script> -->
+	<script src="app/js/ngStorage.js"></script>
+	<script src="app/app.js"></script>
+	<script src="app/components/service.js"></script>
+	<script src="app/components/home/homeController.js"></script>
+	<script src="app/components/survey_form/survey_formController.js"></script>
+	<script src="app/shared/filters.js"></script>
+	<script src="app/shared/directives.js"></script>
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+.container-fluid{
+	&--lg{
+		padding-left: 50px;
+		padding-right: 50px;
+
+	    @media only screen and (max-width : 767px) {
+			padding-left: 15px;
+			padding-right: 15px;
+	    }
+
+	}
+
+	&--lg2{
+		padding-left: 80px;
+		padding-right: 80px;
+
+	    @media only screen and (max-width : 767px) {
+			padding-left: 15px;
+			padding-right: 15px;
+	    }
+
+	}
+}
+
+.form-control{
+	border-radius: 0!important;
+}
+
+.input-group{
+	&-btn{
+		&:last-child{
+			> .btn{
+				border-radius: 0;
+			}
+		}
+	}
+	&-lg{
+		&--xl{
+			.form-control{
+				height: auto;
+				padding-top: 19px;
+				padding-bottom: 19px;
+			}
+			.input-group-btn{
+				> .btn{
+					height: auto;
+					padding: 20px 40px;
+				}
+			}
+		}
+	}
+}
+
+.text{
+	&-success{
+		color: $green;
+	}
+}

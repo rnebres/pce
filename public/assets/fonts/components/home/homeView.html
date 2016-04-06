@@ -1,0 +1,72 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-8">
+			<div class="carousel-container">
+			    <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+			      <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+			        <img ng-src="{{slide.image}}" style="margin:auto;">
+			        <div class="carousel-caption">
+			          <h4>Slide {{slide.id}}</h4>
+			          <p>{{slide.text}}</p>
+			        </div>
+			      </uib-slide>
+			    </uib-carousel>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<h3 class="title--sub text-success">News &amp; Promos</h3>
+			<ul class="list-unstyled newspromos-list">
+				<li><a href="#"><img src="../source/assets/images/slide_1.png" alt="News 1"></a></li>
+				<li><a href="#"><img src="../source/assets/images/slide_2.png" alt="News 2"></a></li>
+			</ul>
+			<a href="#" class="newspromos__viewall">View All</a>
+		</div>
+	</div>
+</div>
+<div class="container-fluid container-fluid--lg2">
+	<h2 class="title--head text-center">What are you looking for?</h2>
+	<div class="input-group input-group-lg input-group-lg--xl">
+		<input type="text" class="form-control" placeholder="Search for chess events, coaching camps and memberships">
+	 	<span class="input-group-btn">
+	        <button class="btn btn-success" type="button">Search</button>
+	    </span>
+	</div>
+	<div class="row m-t-md">
+		<div class="col-sm-6">
+			<div class="form-inline filter">
+			  <div class="form-group">
+			    <label for="country">Country</label>
+			    <select class="form-control" name="search_country" id="country" ng-model="selected.country">
+			      <option value="{{country.id}}" ng-repeat="country in countries track by $index">{{country.name}}</option>
+			    </select>
+			  </div>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="form-inline filter text-right">
+			  <div class="form-group">
+			    <label for="filter">Filter</label>
+			    <select class="form-control" name="search_filter" id="filter" ng-model="selected.filter">
+			      <option value="{{filter.id}}" ng-repeat="filter in filters track by $index">{{filter.name}}</option>
+			    </select>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<div class="row m-t-md">
+		<ul class="list-unstyled chess-events-list">
+			<li class="col-sm-6 col-md-4 chess-event" ng-repeat="event in events track by $index">
+				<img src="{{event.image}}" alt="Image $index">
+				<div class="event"> 
+					<h3 class="event__title">{{event.title}}</h3>
+					<p class="event__description" ng-if="event.description">{{event.description}}</p>
+					<label class="event__organizer">{{event.organizer}}</label>
+					<div class="event__action" ng-if="event.share || event.bookmark">
+						<a href="#" ng-if="event.share"><i class="fa fa-share-square-o"></i></a>
+						<a href="#" ng-if="event.bookmark"><i class="fa fa-bookmark"></i></a>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>

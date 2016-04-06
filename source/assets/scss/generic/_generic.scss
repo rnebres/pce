@@ -1,0 +1,16 @@
+.m-t-lg{ margin-top: 75px!important; }
+.m-t-md{ margin-top: 50px!important; }
+
+.m-b-sm{ margin-bottom: 30px!important; }
+
+
+.title{
+	&--sub{
+		margin: 10px 0;
+	}
+	&--head{
+		font-family: "MuseoSansBold"; 
+		margin-top: 95px;
+		margin-bottom: 25px;
+	}
+}

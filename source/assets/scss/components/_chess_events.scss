@@ -1,0 +1,76 @@
+.event{
+	&__item{
+		margin-bottom: 25px;
+	}
+	&__title{
+		font-family: 'MuseoSansBold';
+		padding: 0;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		height: 52px;
+		border-bottom: 0;
+		color: $green;
+
+		@media only screen and (max-width : 1200px) {  
+			font-size: 18px;
+		}
+	}
+	&__image{
+		height: 200px;
+		overflow: hidden;
+		img{
+			width: 100%;
+			max-width: 100%;
+		}
+	}
+	&__details{
+		position: relative;
+		height: 185px;
+		padding: 15px 20px;
+		background-color: $white;
+		border: 1px solid #dfdddd;
+		border-top: 0;
+	}
+	&__footer{
+		position: absolute;
+		left: 20px;
+		right: 20px;
+		bottom: 15px;
+	}
+	&__organizer{
+		float: left;
+		margin: 0;
+	}
+	&__actions{
+		text-align: right;
+	    margin-top: -3px;
+		a{
+			margin-left: 5px;
+			font-size: 18px;
+			i{
+				color: $green;
+			}
+		}
+	}
+
+	&-btn-group{
+		width: 100%;
+
+		.btn{
+			padding-top: 25px;
+			padding-bottom: 25px;
+			width: 33.33%;
+			border: 1px solid $green!important;
+			background-color: $white;
+			font-size: 16px;
+			color: $green;
+
+			&.active{
+				font-family: "MuseoSansReg";
+				background-color: $green;
+				color: $white;
+			    box-shadow: none;
+			}
+		}
+	}
+}

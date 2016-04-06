@@ -1,0 +1,26 @@
+.newspromos{
+	&-list{
+		> li{
+			margin-bottom: 15px;
+			height: 200px;
+		    overflow: hidden;
+			> a{
+				img{
+				    max-width: 100%;
+				}
+			}
+		}
+	}
+	&__viewall{
+		margin-right: 5px;
+		float: right;
+		text-decoration: underline;
+		font-size: 16px;
+		color: $green;
+
+		&:hover{
+			color: lighten($green,10%)!important;
+		}
+
+	}
+}
