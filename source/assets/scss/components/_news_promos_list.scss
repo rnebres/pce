@@ -1,26 +1,168 @@
-.newspromos{
-	&-list{
-		> li{
-			margin-bottom: 15px;
-			height: 200px;
-		    overflow: hidden;
-			> a{
-				img{
-				    max-width: 100%;
-				}
-			}
-		}
-	}
-	&__viewall{
-		margin-right: 5px;
-		float: right;
-		text-decoration: underline;
-		font-size: 16px;
-		color: $green;
+.promotions {
+    &__title {
+        width: 85%;
+        font-size: 18px;
+        @media only screen and (max-width: 767px) {
+            font-size: 14px;
+        }
+    }
+    &-list {
+        > li {
+            > a {
+                position: relative;
+                padding: 30px 15px;
+                display: block;
+                background-color: #fff;
+                border-bottom: 1px solid #dfdddd;
+                &:after {
+                    font-family: FontAwesome;
+                    content: '\f105';
+                    position: absolute;
+                    right: 15px;
+                    top: 35%;
+                    font-size: 30px;
+                    color: $green;
+                }
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            &:last-child {
+                > a {
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+    &-thumbnails {
+        position: relative;
+        padding: 0 34px;
+        overflow: hidden;
+        @media only screen and (max-width: 767px) {
+            padding: 0;
+        }
+        .btn {
+            position: absolute;
+            top: 18px;
+            background-color: transparent;
+            @media only screen and (max-width: 767px) {
+                top: 3px;
+            }
+            .fa {
+                font-size: 60px;
+                color: $green;
+                @media only screen and (max-width: 767px) {
+                    font-size: 40px;
+                }
+            }
+            &:hover,
+            &:active,
+            &:focus {
+                border: 0;
+                outline: 0;
+                box-shadow: none;
+            }
+            &--next {
+                right: 0;
+            }
+            &--prev {
+                left: -15px;
+                @media only screen and (max-width: 767px) {
+                    left: 0;
+                }
+            }
+        }
+        &-list {
+            overflow: hidden;
+            @media only screen and (max-width: 767px) {
+                padding-left: 45px;
+            }
+            > li {
+                float: left;
+                margin-right: 7px;
+                width: 30%;
+                @media only screen and (max-width: 992px) {
+                    width: 32%;
+                }
+                @media only screen and (max-width: 767px) {
+                    width: 25%;
+                }
+                > a {
+                    display: inline-block;
+                    width: 100%;
+                    height: 108px;
+                    overflow: hidden;
+                    @media only screen and (max-width: 767px) {
+                        height: auto;
+                    }
+                    img {
+                        max-height: 100%;
+                        @media only screen and (max-width: 992px) {
+                            width: 100%;
+                            max-height: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .tab-pane {
+        padding: 0;
+        margin-top: 1px;
+        height: 360px;
+        overflow: auto;
+        border: 1px solid $greyLight;
+        border-top: 0;
 
-		&:hover{
-			color: lighten($green,10%)!important;
-		}
+        @media only screen and (max-width : 767px) {
+			 height: 250px;
+        }
 
-	}
+        &::-webkit-scrollbar {
+            width: 7px;
+        }
+        &::-webkit-scrollbar-track {
+            -webkit-box-shadow: none;
+        }
+        &::-webkit-scrollbar-button {
+            width: 0;
+            height: 0;
+            display: none;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #dfdddd;
+            outline: 1px solid #dfdddd;
+            border-radius: 30px;
+        }
+    }
+    .nav-tabs {
+        &.nav-justified {
+            > li {
+                display: inline-block;
+                width: 50%;
+                float: left;
+                > a {
+                    border: 1px solid $green;
+                    border-radius: 0;
+                    background-color: $white;
+                    color: $green;
+                    font-size: 18px;
+                    @media only screen and (max-width: 1200px) {
+                        font-size: 16px;
+                    }
+                    @media only screen and (max-width: 767px) {
+                        font-size: 14px;
+                    }
+                }
+                &.active {
+                    > a {
+                        font-family: "MuseoSansReg";
+                        border: 1px solid $green;
+                        background-color: $green;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
 }

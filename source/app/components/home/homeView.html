@@ -1,25 +1,47 @@
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-sm-8">
+		<div class="col-sm-12 col-md-8">
 			<div class="carousel-container">
-			    <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-			      <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-			        <img ng-src="{{slide.image}}" style="margin:auto;">
-			        <div class="carousel-caption">
-			          <h4>Slide {{slide.id}}</h4>
-			          <p>{{slide.text}}</p>
-			        </div>
-			      </uib-slide>
-			    </uib-carousel>
+				<carousel-custom slides="slides"></carousel-custom>
 			</div>
 		</div>
-		<div class="col-sm-4">
-			<h3 class="title--sub text-success">News &amp; Promos</h3>
-			<ul class="list-unstyled newspromos-list">
-				<li><a href="#"><img src="../source/assets/images/slide_1.png" alt="News 1"></a></li>
-				<li><a href="#"><img src="../source/assets/images/slide_2.png" alt="News 2"></a></li>
-			</ul>
-			<a href="#" class="newspromos__viewall">View All</a>
+		<div class="col-sm-12 col-md-4 promotions">
+			<h2 class="title--sub text-success">Offers &amp; Promotions</h2>
+	        <div class="promotions-thumbnails">
+	            <ul class="list-unstyled promotions-thumbnails-list">
+	                <li ng-repeat="thumbnail in thumbnails_show track by $index">
+	                    <a href="#">
+	                        <img ng-src="{{thumbnail.image}}" alt="">
+	                    </a>
+	                </li>
+	            </ul>
+	            <button class="btn btn--prev" type="button" ng-click="prevthumbnail()" ng-hide="hidePrev"><i class="fa fa-angle-left"></i></button>
+	        	<button class="btn btn--next" type="button" ng-click="nextthumbnail()" ng-hide="hideNext"><i class="fa fa-angle-right"></i></button>
+	        </div>
+
+	        <uib-tabset active="activeJustified" justified="true">
+	            <uib-tab index="0" heading="Early Bird Offer">
+	                <ul class="list-unstyled promotions-list">
+	                    <li ng-repeat="earlybird in promotions.earlybird track by $index">
+	                        <a href="{{earlybird.link}}">
+	                            <time>{{earlybird.date}}</time>
+	                            <p class="promotions__title">{{earlybird.title}}</p>
+	                        </a>
+	                    </li>
+	                </ul>
+	            </uib-tab>
+	            <uib-tab index="1" heading="Trending">
+	                <ul class="list-unstyled promotions-list">
+	                    <li ng-repeat="trending in promotions.trending track by $index">
+	                        <a href="{{trending.link}}">
+	                            <time>{{trending.date}}</time>
+	                            <p class="promotions__title">{{trending.title}}</p>
+	                        </a>
+	                    </li>
+	                </ul>
+	            </uib-tab>
+	        </uib-tabset>
+			 
 		</div>
 	</div>
 </div>
@@ -57,7 +79,7 @@
 		</div>
 	</div>
 	<div class="row m-t-md">
-		<ul class="list-unstyled row event-list">
+		<ul class="list-unstyled event-list">
 	        <li class="col-md-4 col-sm-6 event__item" ng-repeat="tournament in events[eventsPicked] track by $index">
 		        <div class="event__image">
 		           <img ng-src="{{tournament.image}}" alt="">

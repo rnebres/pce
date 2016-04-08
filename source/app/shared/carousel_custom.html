@@ -1,0 +1,31 @@
+<div class="carousel-custom">
+    <!-- main slider carousel -->
+    <div id="slider">
+      <div class="carousel-custom-main" id="carousel-bounding-box">
+          <div id="myCarousel" class="carousel slide">
+              <!-- main slider carousel items -->
+              <div class="carousel-inner">
+                  <div class="item" ng-class="{active: $index==0}" data-slide-number="{{$index}}" ng-repeat="slide in slides track by $index">
+                      <img ng-src="{{slide.image}}" class="img-responsive">
+                  </div>
+              </div>
+              <!-- main slider carousel nav controls --> 
+              <!-- <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
+              <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a> -->
+          </div>
+      </div>
+    </div>
+    <!--/main slider carousel-->
+
+    <!-- thumb navigation carousel -->
+    <div id="slider-thumbs">
+        <!-- thumb navigation carousel items -->
+      <ul class="list-inline carousel-custom-list">
+        <li ng-repeat="slide in slides track by $index"> 
+          <a >
+            <img ng-src="{{slide.image}}" id="carousel-selector-{{$index}}">
+          </a>
+        </li>
+      </ul>
+    </div>
+</div>

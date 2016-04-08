@@ -12,10 +12,34 @@
 
 	&__title{
 		font-size: 16px;
-	}
 
+		@media only screen and (max-width : 767px) {
+			text-align: center;
+		}
+	}
+	
+	&__details{
+		@media only screen and (max-width : 767px) {
+			text-align: center;
+		}
+	}
+	.copyright{
+		@media only screen and (max-width : 767px) {
+			float: none!important;
+			margin-top: 15px;
+			text-align: center;
+			font-size: 12px;
+		}
+	}
 	&__aside{
 		&-list{
+			overflow: hidden;
+
+			@media only screen and (max-width : 767px) {
+				width: 244px;
+				margin: 0 auto;
+			}
+
 			> li{
 				float: left;
 				padding: 0 10px;
@@ -39,6 +63,9 @@
 	}
 
 	.social-list{
+		margin: 0 auto;
+		width: 61px;
+		overflow: hidden;
 		> li {
 			 > a{
 			 	padding: 0 10px;

@@ -1,15 +1,61 @@
 .carousel-container{
-	height: 400px;
+	// height: 575px;
+	.carousel-custom{
+		&-list{
+			margin-top: 10px;
+			margin-bottom: 0;
+			overflow: hidden;
+			> li{
+				float: left;
+			    width: 11.11%;
+				height: 108px;
+			    overflow: hidden;
+				
+				@media only screen and (max-width : 767px) {
+					width: 20%;
 
-	.carousel{
-		height: 100%;
+					&:nth-child(n+6){
+						display: none;
+					}
+				}
 
-		&-inner{
-			height: 100%;
-
-			.item{
-				height: 100%;
+				> a{
+					display: block;
+					height: 100%;
+					cursor: pointer;
+					> img{
+						max-height: 100%;
+					}
+				}
 			}
 		}
+		&-main{
+			.carousel-inner{
+				.item{
+					height: 460px;
+
+					@media only screen and (max-width : 992px) {
+						height: 350px;
+    				}
+
+    				@media only screen and (max-width : 767px) {
+						height: 200px;
+    				}
+
+					img{
+					    margin: 0 auto;
+						width: 100%;
+
+						@media only screen and (max-width : 767px) {
+							width: auto;
+							height: 100%;
+	    				}
+					}
+				}
+			}
+		}
+	}
+	.selected img {
+		opacity:0.5;
 	}
 }
